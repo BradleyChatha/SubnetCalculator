@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SubnetCalculator": {
+      "commandName": "Project",
+      "commandLineArgs": "s 10.128.192.0 18 5"
+    }
+  }
+}
