@@ -95,7 +95,7 @@ let asIpString (ip: int) =
     $"{(ip &&& 0xFF000000) >>> 24}.{(ip &&& 0x00FF0000) >>> 16}.{(ip &&& 0xFF00) >>> 8}.{ip &&& 0xFF}"
 
 let cidrToMask (cidr: int) =
-    (int)(0xFFFFFFFFu >>> (32 - cidr)) // Have to do it to an unsigned number otherwise F# negative extends the number.
+    (int)(0xFFFFFFFFu >>> (32 - cidr)) // Have to do it to an unsigned number otherwise F# sign extends the number.
 
 let getHostCidr net sub =
     let hostCidr = 32 - (net + sub)
